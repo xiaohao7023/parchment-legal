@@ -61,51 +61,39 @@
 
         <div class="card">
             <h1>Privacy Policy</h1>
-            <p class="update-date">Last Updated: June 29, 2026</p>
+            <p class="update-date">Last Updated: October 24, 2026</p>
 
             <div class="highlight">
-                <strong>Your Privacy Matters:</strong> Markdown Matrix is designed with privacy in mind. All your files and data stay on your device. We never collect, store, or transmit your personal information.
+                Markdown Matrix stores your notes and recordings in the app. Some features send data to Apple, iCloud, or service providers when you use them. AI processing starts when you tap an AI action.
             </div>
 
-            <h2>1. Information We Collect</h2>
-            <p><strong>We do not collect any personal information or usage data.</strong></p>
-            <ul>
-                <li>No account registration required</li>
-                <li>No analytics or tracking</li>
-                <li>No data transmitted to external servers</li>
-                <li>No advertising or marketing</li>
-            </ul>
+            <h2>1. Data Stored on Your Device and in iCloud</h2>
+            <p>Notes, transcripts, and recordings are saved in the app's local library. When iCloud Sync is enabled and you are signed in to iCloud, note titles, Markdown content, spaces, themes, and timestamps are synchronized to your private iCloud database through Apple's CloudKit. Original audio attachment files remain in the app's local storage.</p>
 
-            <h2>2. Local Data Storage</h2>
-            <p>All your Markdown files are stored <strong>locally on your device</strong> in the app's sandbox. Your files never leave your device and are not accessible to us or any third party.</p>
+            <h2>2. Speech Recognition</h2>
+            <p>Markdown Matrix uses Apple's Speech framework. It uses on-device recognition when the selected language and device support it. If on-device recognition is unavailable, iOS may send audio to Apple for network-based recognition. The app shows a notice before recording when that route is needed. Transcripts and original recordings are saved in your local library afterward.</p>
 
-            <h2>3. Photo Library Access</h2>
-            <p>The app requests access to your photo library <strong>only</strong> when you use the "Save as Image" feature to export a Markdown document as an image. We:</p>
-            <ul>
-                <li>Only save new images you explicitly create</li>
-                <li>Never access, read, or upload your existing photos</li>
-                <li>Never transmit images to external servers</li>
-            </ul>
+            <h2>3. AI Organization and Insights</h2>
+            <p>When you tap <strong>Generate AI Insights</strong> or <strong>Organize with AI</strong>, the app sends the selected note title and text, or transcript text and a requested title for voice organization, to our API at <code>api.haoapps.tech</code>. AI requests also include your subscription tier; voice organization additionally includes the requested output language. The request includes a pseudonymous installation identifier and request identifier for quota management and retries. Our service forwards the content and relevant title or language to the AI model provider configured for the service. The original audio file is not sent. Generated notes and insights are saved in your local library.</p>
+            <p>Each AI action is a one-time request started when you choose an AI feature. Our service does not write submitted note or transcript text to its D1 database. To support retries without another model call, Cloudflare may temporarily cache the generated response for up to 10 minutes. Service records include pseudonymous installation and request identifiers, subscription tier, request status, model name, timestamps, quota counts, token totals, and request timing. The AI model provider is selected through server configuration; its current retention terms have not been verified, so we cannot promise when the provider deletes request data. Avoid sending sensitive or confidential content to AI features until those terms are confirmed.</p>
+            <p>If an optional Feishu notification is configured, an AI Insights request may also send the original title and generated title, topics, and summary to Feishu. The note body and installation identifier are not included in that notification.</p>
 
-            <h2>4. File Import</h2>
-            <p>You can import .md files from other apps (such as Files, WeChat, or email) using iOS's built-in sharing features. These files are copied to the app's local storage and are not transmitted anywhere.</p>
+            <h2>4. Analytics</h2>
+            <p>Optional Usage Analytics is off by default and can be changed in Settings. When enabled, the app sends events to <code>analytics.haoapps.tech</code>. Events may include a pseudonymous installation identifier, session identifier, event name and time, app version and build, platform, device and storefront region, and event properties. Subscription events can include the product and plan, price and currency, offer type, and Apple transaction identifier. This data is used to understand app use and subscription flows, not for advertising or cross-app tracking. Analytics and service-operation records do not currently have a fixed retention period. Turning analytics off stops future event uploads and clears events queued on the device.</p>
 
-            <h2>5. Third-Party Services</h2>
-            <p><strong>Markdown Matrix does not use any third-party services.</strong></p>
-            <ul>
-                <li>No analytics SDKs (no Google Analytics, no Firebase)</li>
-                <li>No advertising SDKs</li>
-                <li>No social media SDKs</li>
-                <li>No external APIs or cloud services</li>
-            </ul>
+            <h2>5. Photos and File Import</h2>
+            <p>When you use Save as Image, the app can save the image you create to Photos. The app does not read or upload your existing photo library. Imported Markdown files are copied into the app's local library; they are sent to an AI service only if you choose an AI feature for that content.</p>
 
-            <h2>6. Children's Privacy</h2>
-            <p>Markdown Matrix is safe for users of all ages. We do not collect any information from anyone, including children under 13.</p>
+            <h2>6. Purchases</h2>
+            <p>Subscriptions are processed by Apple through StoreKit. Markdown Matrix does not receive your payment card details.</p>
 
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. Since we don't collect your email or any contact information, we cannot notify you directly of changes.</p>
+            <h2>7. Your Choices and Data Requests</h2>
+            <p>You can turn iCloud Sync off in Settings to stop future synchronization. You can delete local notes and recordings from the app. AI features send content only when you tap an AI action; there is no ongoing AI processing to revoke. Because model-provider retention terms have not been verified, we cannot guarantee deletion of a request from that provider. You can contact us about privacy questions or requests concerning data handled by our services.</p>
 
-            <h2>8. Contact Us</h2>
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update this policy as the app's services change. We will update the revision date when a new version takes effect.</p>
+
+            <h2>9. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us:</p>
             <ul>
                 <li>Email: <a href="mailto:huangxiaohao7023@icloud.com" style="color: #C15F3C;">huangxiaohao7023@icloud.com</a></li>
